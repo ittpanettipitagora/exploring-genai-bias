@@ -1,0 +1,106 @@
+body {
+    background-image: url(Screenshot\ 2025-11-17\ 203221.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -70px;
+    padding: 2rem 3rem;
+    position: absolute;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+.logo img {
+    height: 200px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.buttons button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.buttons .buy-deso {
+    background-color: transparent;
+    color: #fff;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: -150px;
+    margin-bottom: 3rem;
+}
+
+.hero-buttons button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.hero-buttons .start-building {
+    background-color: transparent;
+    color: #fff;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.875rem;
+    color: #a0a0a0;
+}
