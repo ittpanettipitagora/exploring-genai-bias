@@ -31,80 +31,72 @@
 
     <main class="container page-content">
         <div class="page-header">
-            <h1 id="modelName">Modello</h1>
+            <h1 id="modelName">[Nome del Modello]</h1>
             <p class="page-subtitle">
-                Analisi dettagliata dei bias e delle tendenze nel modello generativo
+                Inserisci qui una breve introduzione al modello: chi lo ha sviluppato, che tipo di tecnologia usa, e l'obiettivo dell'analisi.
             </p>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <h2>Overview del Modello</h2>
+                <h2>Introduzione e Caratteristiche</h2>
             </div>
             <div class="card-content prose">
-                <p>
-                    Questo modello generativo è stato analizzato attraverso migliaia di generazioni
-                    per identificare pattern sistematici nella rappresentazione di diverse categorie
-                    demografiche. I risultati mostrano tendenze significative che riflettono bias
-                    presenti nei dati di training.
-                </p>
-                <p>
-                    L'analisi copre diverse dimensioni: genere, etnia, età e contesto professionale.
-                    Attraverso metodologie quantitative e qualitative, abbiamo mappato come il modello
-                    interpreta e visualizza diverse professioni e ruoli sociali.
-                </p>
+                <ul>
+                    <li><strong>Nome del modello:</strong> Indica il nome completo.</li>
+                    <li><strong>Origine e sviluppatore:</strong> Chi lo ha creato? (es. OpenAI, Google, StabilityAI...)</li>
+                    <li><strong>Tecnologia:</strong> Breve descrizione (es. transformer, diffusion, ecc.).</li>
+                    <li><strong>Approccio visivo:</strong> Lo stile delle immagini (realistico, creativo, cartoon, ecc.).</li>
+                    <li><strong>Obiettivo:</strong> Cosa vuoi indagare con questo modello?</li>
+                </ul>
             </div>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <h2>Distribuzione di Genere per Professione</h2>
-                <p>Percentuale di rappresentazione maschile vs femminile nelle generazioni</p>
+                <h2>Panoramica delle Generazioni</h2>
+                <p>Inserisci una galleria o carosello di immagini rappresentative generate dal modello per diverse professioni. Puoi aggiungere una gallery comparativa o uno slider.</p>
             </div>
             <div class="card-content">
-                <canvas id="barChart"></canvas>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">
-                    <h2>Distribuzione Etnica</h2>
-                    <p>Rappresentazione delle diverse etnie nelle generazioni</p>
-                </div>
-                <div class="card-content">
-                    <canvas id="pieChart"></canvas>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h2>Indice di Bias</h2>
-                    <p>Valutazione multidimensionale dei bias (0-100)</p>
-                </div>
-                <div class="card-content">
-                    <canvas id="radarChart"></canvas>
+                <div class="gallery-comparativa">
+                    <!-- Inserisci qui le immagini: <figure><img src="..." alt="..."><figcaption>Professione</figcaption></figure> -->
                 </div>
             </div>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <h2>Conclusioni</h2>
+                <h2>Analisi qualitativa</h2>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Descrivi le tendenze osservate: stereotipi di genere, etnia prevalente, colore della pelle, ecc.</li>
+                    <li>Inserisci esempi visivi concreti (immagini o descrizioni).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Confronto con altri modelli</h2>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Breve sintesi di cosa distingue questo modello rispetto agli altri (più neutro? più creativo? più stereotipato?).</li>
+                    <li>Valuta l’inserimento di grafici comparativi.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Conclusione / Insight</h2>
             </div>
             <div class="card-content prose">
-                <p>
-                    L'analisi rivela pattern sistematici di bias che riflettono stereotipi sociali
-                    radicati. La distribuzione di genere nelle professioni mostra una forte tendenza
-                    a riprodurre ruoli tradizionali, mentre la rappresentazione etnica evidenzia una
-                    predominanza di caratteristiche caucasiche.
-                </p>
-                <p>
-                    Questi risultati sottolineano l'importanza di dataset più diversificati e
-                    bilanciati nel training dei modelli generativi, così come la necessità di
-                    meccanismi di correzione e verifica per mitigare la perpetuazione di stereotipi
-                    attraverso l'intelligenza artificiale.
-                </p>
+                <ul>
+                    <li>Scrivi 1–2 punti chiave sul comportamento del modello.</li>
+                    <li>Concludi con una domanda aperta o una riflessione: “Cosa ci dice questo su come l’AI vede il mondo?”</li>
+                </ul>
             </div>
         </div>
     </main>

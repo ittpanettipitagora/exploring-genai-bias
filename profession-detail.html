@@ -31,39 +31,47 @@
 
     <main class="container page-content">
         <div class="page-header">
-            <h1 id="professionName">Professione</h1>
+            <h1 id="professionName">[Nome della Professione]</h1>
             <p class="page-subtitle">
-                Analisi comparativa della rappresentazione attraverso diversi modelli
+                Inserisci qui una breve introduzione su come i modelli generativi rappresentano questa professione e
+                l'obiettivo dell'analisi.
             </p>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <h2>Contesto della Professione</h2>
+                <h2>Introduzione</h2>
             </div>
             <div class="card-content prose">
-                <p>
-                    La professione analizzata presenta pattern interessanti di rappresentazione
-                    attraverso i vari modelli generativi. Le differenze osservate riflettono non
-                    solo i bias presenti nei dataset di training, ma anche le diverse filosofie
-                    di sviluppo e calibrazione dei modelli.
-                </p>
-                <p>
-                    Attraverso l'analisi di migliaia di generazioni, abbiamo identificato tendenze
-                    sistematiche nella rappresentazione di genere, etnia e contesto professionale.
-                    Questi pattern forniscono insight preziosi su come l'AI interpreta e visualizza
-                    i ruoli professionali.
-                </p>
+                <ul>
+                    <li><strong>Descrivi la professione:</strong> Qual è il ruolo, quali sono le sue caratteristiche
+                        principali?</li>
+                    <li><strong>Contesto socioculturale:</strong> Esistono stereotipi o aspettative comuni legate a
+                        questa professione?</li>
+                    <li><strong>Obiettivo:</strong> Spiega cosa vuoi indagare attraverso le immagini generate dai
+                        modelli.</li>
+                    <li><strong>Reddito:</strong> È una professione ad alto o basso reddito? Quali sono le fonti che
+                        rafforzano questa distinzione?</li>
+                </ul>
             </div>
         </div>
 
         <div class="card">
             <div class="card-header">
-                <h2>Confronto tra Modelli</h2>
-                <p id="chartDescription">Distribuzione di genere e diversità nelle generazioni</p>
+                <h2>Galleria Comparativa</h2>
+                <p>Inserisci qui una galleria di immagini generate dai diversi modelli per questa professione. Ogni
+                    immagine deve essere accompagnata dal nome del modello.</p>
             </div>
             <div class="card-content">
-                <canvas id="comparisonChart"></canvas>
+                <div class="gallery-comparativa">
+                    <!-- Inserisci qui le immagini: 
+                        <figure><img src="..." alt="..."><figcaption>Leonardo AI</figcaption></figure>
+                        <figure><img src="..." alt="..."><figcaption>ChatGPT</figcaption></figure>
+                        <figure><img src="..." alt="..."><figcaption>Gemini</figcaption></figure>
+                        <figure><img src="..." alt="..."><figcaption>Canva</figcaption></figure>
+                        <figure><img src="..." alt="..."><figcaption>Bing</figcaption></figure>
+                    -->
+                </div>
             </div>
         </div>
 
@@ -71,33 +79,42 @@
 
         <div class="card">
             <div class="card-header">
-                <h2>Key Insights</h2>
+                <h2>Analisi Visiva</h2>
             </div>
             <div class="card-content">
-                <div class="insights">
-                    <div class="insight insight-primary">
-                        <h3>Variabilità tra Modelli</h3>
-                        <p>
-                            Si osserva una variazione significativa nella rappresentazione tra i diversi
-                            modelli, con alcuni che mostrano una maggiore tendenza verso la diversità
-                            rispetto ad altri.
-                        </p>
-                    </div>
-                    <div class="insight insight-accent">
-                        <h3>Miglioramento Progressivo</h3>
-                        <p>
-                            I dati temporali suggeriscono un miglioramento graduale, probabilmente dovuto
-                            a una maggiore consapevolezza del problema e a interventi mirati nei dataset
-                            di training.
-                        </p>
-                    </div>
-                    <div class="insight insight-secondary">
-                        <h3>Persistenza degli Stereotipi</h3>
-                        <p>
-                            Nonostante i miglioramenti, permangono bias significativi che richiedono
-                            ulteriori interventi strutturali nella fase di training e post-processing.
-                        </p>
-                    </div>
+                <ul>
+                    <li>Osserva le immagini: quali pattern emergono? (genere, etnia, abbigliamento, ambientazione,
+                        status percepito)</li>
+                    <li>Scrivi alcune frasi di sintesi, ad esempio: “Solo Leonardo AI rappresenta la professione come
+                        donna.” Oppure: “Gemini mostra ambienti più moderni rispetto a Bing.”</li>
+                    <li>Confronta le scelte stilistiche e i dettagli tra i modelli.</li>
+                </ul>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Bias rilevati</h2>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>Individua e descrivi eventuali stereotipi ripetuti.</li>
+                        <li>Nota differenze culturali implicite tra i modelli.</li>
+                        <li>Segnala assenze significative (es. nessuna rappresentazione femminile o di persone non
+                            bianche).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Spunto critico</h2>
+                </div>
+                <div class="card-content">
+                    <blockquote>
+                        Concludi con una domanda aperta o una riflessione critica, ad esempio: “Se l’AI associa questa
+                        professione a un solo genere, cosa ci dice sul nostro dataset collettivo?”
+                    </blockquote>
                 </div>
             </div>
         </div>
