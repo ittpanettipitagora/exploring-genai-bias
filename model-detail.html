@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Modello - AI Bias Research</title>
+    <meta name="description" content="Analisi dettagliata dei bias e delle tendenze nel modello generativo">
+    <link rel="stylesheet" href="/public/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">AI Bias Research</a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/models.html" class="nav-link active">Modelli</a></li>
+                <li><a href="/professions.html" class="nav-link">Professioni</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <div class="page-header">
+            <h1 id="modelName">Modello</h1>
+            <p class="page-subtitle">
+                Analisi dettagliata dei bias e delle tendenze nel modello generativo
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Overview del Modello</h2>
+            </div>
+            <div class="card-content prose">
+                <p>
+                    Questo modello generativo è stato analizzato attraverso migliaia di generazioni
+                    per identificare pattern sistematici nella rappresentazione di diverse categorie
+                    demografiche. I risultati mostrano tendenze significative che riflettono bias
+                    presenti nei dati di training.
+                </p>
+                <p>
+                    L'analisi copre diverse dimensioni: genere, etnia, età e contesto professionale.
+                    Attraverso metodologie quantitative e qualitative, abbiamo mappato come il modello
+                    interpreta e visualizza diverse professioni e ruoli sociali.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Distribuzione di Genere per Professione</h2>
+                <p>Percentuale di rappresentazione maschile vs femminile nelle generazioni</p>
+            </div>
+            <div class="card-content">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Distribuzione Etnica</h2>
+                    <p>Rappresentazione delle diverse etnie nelle generazioni</p>
+                </div>
+                <div class="card-content">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Indice di Bias</h2>
+                    <p>Valutazione multidimensionale dei bias (0-100)</p>
+                </div>
+                <div class="card-content">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Conclusioni</h2>
+            </div>
+            <div class="card-content prose">
+                <p>
+                    L'analisi rivela pattern sistematici di bias che riflettono stereotipi sociali
+                    radicati. La distribuzione di genere nelle professioni mostra una forte tendenza
+                    a riprodurre ruoli tradizionali, mentre la rappresentazione etnica evidenzia una
+                    predominanza di caratteristiche caucasiche.
+                </p>
+                <p>
+                    Questi risultati sottolineano l'importanza di dataset più diversificati e
+                    bilanciati nel training dei modelli generativi, così come la necessità di
+                    meccanismi di correzione e verifica per mitigare la perpetuazione di stereotipi
+                    attraverso l'intelligenza artificiale.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/public/script.js"></script>
+    <script src="/public/model-detail.js"></script>
+</body>
+
+</html>

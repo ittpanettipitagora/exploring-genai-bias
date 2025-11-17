@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Professione - AI Bias Research</title>
+    <meta name="description" content="Analisi comparativa della rappresentazione attraverso diversi modelli">
+    <link rel="stylesheet" href="/public/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">AI Bias Research</a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/models.html" class="nav-link">Modelli</a></li>
+                <li><a href="/professions.html" class="nav-link active">Professioni</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <div class="page-header">
+            <h1 id="professionName">Professione</h1>
+            <p class="page-subtitle">
+                Analisi comparativa della rappresentazione attraverso diversi modelli
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Contesto della Professione</h2>
+            </div>
+            <div class="card-content prose">
+                <p>
+                    La professione analizzata presenta pattern interessanti di rappresentazione
+                    attraverso i vari modelli generativi. Le differenze osservate riflettono non
+                    solo i bias presenti nei dataset di training, ma anche le diverse filosofie
+                    di sviluppo e calibrazione dei modelli.
+                </p>
+                <p>
+                    Attraverso l'analisi di migliaia di generazioni, abbiamo identificato tendenze
+                    sistematiche nella rappresentazione di genere, etnia e contesto professionale.
+                    Questi pattern forniscono insight preziosi su come l'AI interpreta e visualizza
+                    i ruoli professionali.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Confronto tra Modelli</h2>
+                <p id="chartDescription">Distribuzione di genere e diversità nelle generazioni</p>
+            </div>
+            <div class="card-content">
+                <canvas id="comparisonChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Sezione 'Evoluzione del Bias nel Tempo' rimossa -->
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Key Insights</h2>
+            </div>
+            <div class="card-content">
+                <div class="insights">
+                    <div class="insight insight-primary">
+                        <h3>Variabilità tra Modelli</h3>
+                        <p>
+                            Si osserva una variazione significativa nella rappresentazione tra i diversi
+                            modelli, con alcuni che mostrano una maggiore tendenza verso la diversità
+                            rispetto ad altri.
+                        </p>
+                    </div>
+                    <div class="insight insight-accent">
+                        <h3>Miglioramento Progressivo</h3>
+                        <p>
+                            I dati temporali suggeriscono un miglioramento graduale, probabilmente dovuto
+                            a una maggiore consapevolezza del problema e a interventi mirati nei dataset
+                            di training.
+                        </p>
+                    </div>
+                    <div class="insight insight-secondary">
+                        <h3>Persistenza degli Stereotipi</h3>
+                        <p>
+                            Nonostante i miglioramenti, permangono bias significativi che richiedono
+                            ulteriori interventi strutturali nella fase di training e post-processing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/public/script.js"></script>
+    <script src="/public/profession-detail.js"></script>
+</body>
+
+</html>

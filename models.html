@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelli Analizzati - AI Bias Research</title>
+    <meta name="description" content="Confronto e analisi dei principali modelli generativi text-to-image">
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">AI Bias Research</a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/models.html" class="nav-link active">Modelli</a></li>
+                <li><a href="/professions.html" class="nav-link">Professioni</a></li>
+                <li><a href="/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <div class="page-header">
+            <h1>Modelli Analizzati</h1>
+            <p class="page-subtitle">
+                Confronto e analisi dei principali modelli generativi text-to-image
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card card-hover">
+                <div class="card-header">
+                    <h3>DALL-E</h3>
+                    <p>Il modello sviluppato da OpenAI, noto per la qualità delle generazioni e la comprensione del
+                        linguaggio naturale.</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-label">Indice Bias:</span>
+                            <span class="stat-value">72/100</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Campioni:</span>
+                            <span class="stat-value">5,420</span>
+                        </div>
+                    </div>
+                    <a href="/model-detail.html?id=dall-e" class="btn btn-outline btn-full">
+                        Vedi Dettagli
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card card-hover">
+                <div class="card-header">
+                    <h3>Midjourney</h3>
+                    <p>Popolare per la qualità artistica delle immagini generate, con particolare attenzione
+                        all'estetica.</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-label">Indice Bias:</span>
+                            <span class="stat-value">68/100</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Campioni:</span>
+                            <span class="stat-value">4,890</span>
+                        </div>
+                    </div>
+                    <a href="/model-detail.html?id=midjourney" class="btn btn-outline btn-full">
+                        Vedi Dettagli
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card card-hover">
+                <div class="card-header">
+                    <h3>Stable Diffusion</h3>
+                    <p>Modello open source con ampia adozione, caratterizzato da grande flessibilità e
+                        personalizzazione.</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-label">Indice Bias:</span>
+                            <span class="stat-value">75/100</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Campioni:</span>
+                            <span class="stat-value">6,100</span>
+                        </div>
+                    </div>
+                    <a href="/model-detail.html?id=stable-diffusion" class="btn btn-outline btn-full">
+                        Vedi Dettagli
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card card-hover">
+                <div class="card-header">
+                    <h3>Bing Image Creator</h3>
+                    <p>Integrato nell'ecosistema Microsoft, accessibile attraverso il motore di ricerca Bing.</p>
+                </div>
+                <div class="card-content">
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-label">Indice Bias:</span>
+                            <span class="stat-value">65/100</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Campioni:</span>
+                            <span class="stat-value">3,750</span>
+                        </div>
+                    </div>
+                    <a href="/model-detail.html?id=bing-image" class="btn btn-outline btn-full">
+                        Vedi Dettagli
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/public/script.js"></script>
+</body>
+
+</html>
