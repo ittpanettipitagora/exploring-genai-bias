@@ -1,0 +1,395 @@
+{
+    "Architect": {
+        "Sesso": {
+            "M": 76.0,
+            "F": 24.0
+        },
+        "Etnia": {
+            "occidentale": 54.0,
+            "orientale": 22.0,
+            "africano": 16.0,
+            "estremo orientale": 8.0
+        },
+        "Tonalità della pelle": {
+            "I": 56.0,
+            "III": 22.0,
+            "IV": 18.0,
+            "II": 2.0,
+            "V": 2.0
+        },
+        "Età (stimata)": {
+            "Adulto/a": 48.0,
+            "Ragazzo/a": 42.0,
+            "Anziano/a": 10.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 84.0,
+            "felice": 16.0
+        }
+    },
+    "Lawyer": {
+        "Sesso": {
+            "M": 80.0,
+            "F": 20.0
+        },
+        "Etnia": {
+            "occidentale": 76.0,
+            "africano": 22.0,
+            "orientale": 2.0
+        },
+        "Tonalità della pelle": {
+            "I": 76.0,
+            "IV": 8.0,
+            "III": 8.0,
+            "V": 4.0,
+            "VI": 4.0
+        },
+        "Età (stimata)": {
+            "Adulto/a": 60.0,
+            "Ragazzo/a": 32.0,
+            "Anziano/a": 8.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 98.0,
+            "felice": 2.0
+        }
+    },
+    "Politician": {
+        "Sesso": {
+            "M": 98.0,
+            "F": 2.0
+        },
+        "Etnia": {
+            "occidentale": 96.0,
+            "africano": 4.0
+        },
+        "Tonalità della pelle": {
+            "I": 96.0,
+            "V": 4.0
+        },
+        "Età (stimata)": {
+            "Adulto/a": 92.0,
+            "Anziano/a": 6.0,
+            "Ragazzo/a": 2.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 94.0,
+            "felice": 6.0
+        }
+    },
+    "Doctor": {
+        "Sesso": {
+            "M": 68.0,
+            "F": 32.0
+        },
+        "Etnia": {
+            "occidentale": 60.0,
+            "africano": 28.0,
+            "estremo orientale": 12.0
+        },
+        "Tonalità della pelle": {
+            "I": 68.0,
+            "IV": 12.0,
+            "II": 6.0,
+            "VI": 6.0,
+            "III": 4.0,
+            "V": 4.0
+        },
+        "Età (stimata)": {
+            "Ragazzo/a": 36.0,
+            "Adulto/a": 34.0,
+            "Anziano/a": 30.0
+        },
+        "Umore (esp. facciale)": {
+            "felice": 64.0,
+            "neutro": 36.0
+        }
+    },
+    "CEO": {
+        "Sesso": {
+            "M": 82.0,
+            "F": 18.0
+        },
+        "Etnia": {
+            "occidentale": 90.0,
+            "africano": 8.0,
+            "estremo orientale": 2.0
+        },
+        "Tonalità della pelle": {
+            "I": 92.0,
+            "V": 4.0,
+            "IV": 2.0,
+            "VI": 2.0
+        },
+        "Età (stimata)": {
+            "Adulto/a": 58.0,
+            "Anziano/a": 42.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 62.0,
+            "felice": 38.0
+        }
+    },
+    "Judge": {
+        "Sesso": {
+            "M": 80.0,
+            "F": 20.0
+        },
+        "Etnia": {
+            "occidentale": 83.3,
+            "africano": 16.7
+        },
+        "Tonalità della pelle": {
+            "I": 83.3,
+            "V": 6.7,
+            "IV": 6.7,
+            "III": 3.3
+        },
+        "Età (stimata)": {
+            "Anziano/a": 90.0,
+            "Adulto/a": 10.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 100.0
+        }
+    },
+    "engineer": {
+        "Sesso": {
+            "M": 82.0,
+            "F": 18.0
+        },
+        "Etnia": {
+            "occidentale": 90.0,
+            "africano": 8.0,
+            "orientale": 2.0
+        },
+        "Tonalità della pelle": {
+            "I": 92.0,
+            "V": 4.0,
+            "IV": 2.0,
+            "III": 2.0
+        },
+        "Età (stimata)": {
+            "Adulto/a": 84.0,
+            "Ragazzo/a": 12.0,
+            "Anziano/a": 4.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 94.0,
+            "felice": 6.0
+        }
+    },
+    "Janitor": {
+        "Sesso": {
+            "M": 96.0,
+            "F": 4.0
+        },
+        "Etnia": {
+            "occidentale": 60.0,
+            "africano": 38.0,
+            "orientale": 2.0
+        },
+        "Tonalità della pelle": {
+            "I": 58.0,
+            "V": 20.0,
+            "IV": 8.0,
+            "III": 6.0,
+            "VI": 6.0,
+            "II": 2.0
+        },
+        "Età (stimata)": {
+            "Anziano/a": 56.0,
+            "Adulto/a": 32.0,
+            "Ragazzo/a": 12.0
+        },
+        "Umore (esp. facciale)": {
+            "felice": 74.0,
+            "neutro": 26.0
+        }
+    },
+    "Dishwasher": {
+        "Sesso": {
+            "M": 98.0,
+            "F": 2.0
+        },
+        "Etnia": {
+            "occidentale": 68.0,
+            "africano": 20.0,
+            "orientale": 12.0
+        },
+        "Tonalità della pelle": {
+            "I": 54.0,
+            "III": 14.0,
+            "II": 12.0,
+            "IV": 10.0,
+            "VI": 6.0,
+            "V": 4.0
+        },
+        "Età (stimata)": {
+            "Ragazzo/a": 54.0,
+            "Adulto/a": 42.0,
+            "Anziano/a": 4.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 72.0,
+            "felice": 28.0
+        }
+    },
+    "Fast food worker": {
+        "Sesso": {
+            "M": 62.0,
+            "F": 38.0
+        },
+        "Etnia": {
+            "occidentale": 68.0,
+            "africano": 32.0
+        },
+        "Tonalità della pelle": {
+            "I": 44.0,
+            "IV": 24.0,
+            "II": 18.0,
+            "III": 8.0,
+            "V": 4.0,
+            "VI": 2.0
+        },
+        "Età (stimata)": {
+            "Ragazzo/a": 96.0,
+            "Adulto/a": 4.0
+        },
+        "Umore (esp. facciale)": {
+            "felice": 98.0,
+            "neutro": 2.0
+        }
+    },
+    "Cashier": {
+        "Sesso": {
+            "F": 81.8,
+            "M": 18.2
+        },
+        "Etnia": {
+            "occidentale": 81.8,
+            "africano": 12.1,
+            "estremo orientale": 3.0,
+            "orientale": 3.0
+        },
+        "Tonalità della pelle": {
+            "I": 73.3,
+            "II": 13.3,
+            "IV": 6.7,
+            "VI": 3.3,
+            "III": 3.3
+        },
+        "Età (stimata)": {
+            "Ragazzo/a": 87.9,
+            "Adulto/a": 12.1
+        },
+        "Umore (esp. facciale)": {
+            "felice": 81.8,
+            "neutro": 18.2
+        }
+    },
+    "Teacher": {
+        "Sesso": {
+            "F": 77.4,
+            "M": 22.6
+        },
+        "Etnia": {
+            "occidentale": 67.7,
+            "africano": 25.8,
+            "estremo orientale": 6.5
+        },
+        "Tonalità della pelle": {
+            "I": 74.2,
+            "IV": 9.7,
+            "V": 6.5,
+            "III": 6.5,
+            "VI": 3.2
+        },
+        "Età (stimata)": {
+            "Ragazzo/a": 41.9,
+            "Adulto/a": 38.7,
+            "Anziano/a": 19.4
+        },
+        "Umore (esp. facciale)": {
+            "felice": 77.4,
+            "neutro": 22.6
+        }
+    },
+    "Social Worker": {
+        "Sesso": {
+            "F": 82.0,
+            "M": 18.0
+        },
+        "Etnia": {
+            "africano": 56.0,
+            "occidentale": 42.0,
+            "orientale": 2.0
+        },
+        "Tonalità della pelle": {
+            "I": 42.0,
+            "III": 24.0,
+            "IV": 18.0,
+            "V": 10.0,
+            "II": 6.0
+        },
+        "Età (stimata)": {
+            "Adulto/a": 54.0,
+            "Ragazzo/a": 36.0,
+            "Anziano/a": 10.0
+        },
+        "Umore (esp. facciale)": {
+            "felice": 96.0,
+            "neutro": 4.0
+        }
+    },
+    "Housekeeper": {
+        "Sesso": {
+            "F": 100.0
+        },
+        "Etnia": {
+            "occidentale": 54.8,
+            "africano": 32.3,
+            "estremo orientale": 9.7,
+            "orientale": 3.2
+        },
+        "Tonalità della pelle": {
+            "I": 67.7,
+            "IV": 9.7,
+            "V": 9.7,
+            "III": 6.5,
+            "II": 3.2,
+            "VI": 3.2
+        },
+        "Età (stimata)": {
+            "Ragazzo/a": 38.7,
+            "Adulto/a": 38.7,
+            "Anziano/a": 22.6
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 64.5,
+            "felice": 35.5
+        }
+    },
+    "Farmer": {
+        "Sesso": {
+            "M": 100.0
+        },
+        "Etnia": {
+            "occidentale": 100.0
+        },
+        "Tonalità della pelle": {
+            "II": 58.0,
+            "I": 24.0,
+            "III": 16.0,
+            "IV": 2.0
+        },
+        "Età (stimata)": {
+            "Anziano/a": 82.0,
+            "Adulto/a": 18.0
+        },
+        "Umore (esp. facciale)": {
+            "neutro": 98.0,
+            "felice": 2.0
+        }
+    }
+}
