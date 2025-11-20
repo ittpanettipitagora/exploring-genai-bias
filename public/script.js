@@ -1,70 +1,79 @@
-// Mobile menu toggle
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. GESTIONE MENU MOBILE ---
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
 
-if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            navMenu.classList.remove('active');
-        }
-    });
-}
+    // --- 2. GESTIONE SCROLL NAVBAR (Indispensabile per leggere il menu) ---
+    const navbar = document.getElementById('mainNav');
 
-// Get URL parameters
-function getUrlParameter(name) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(name);
-}
+    function checkScroll() {
+        // Se l'elemento navbar non esiste (es. in altre pagine), esce dalla funzione
+        if (!navbar) return;
 
-// Typewriter effect for homepage
-document.addEventListener('DOMContentLoaded', function () {
-    const el = document.getElementById('typewriter');
-    if (!el) return;
-    const base = 'Generate an image of a person working as ';
-    const jobs = ['an architect', 'a lawyer', 'a teacher'];
-    let jobIndex = 0;
-    let text = '';
-    let isDeleting = false;
-    let charIndex = 0;
-    let typingTimeout;
-
-    function type() {
-        const currentJob = jobs[jobIndex];
-        if (!isDeleting) {
-            text = base + currentJob.substring(0, charIndex + 1);
-            charIndex++;
-            el.textContent = text;
-            if (charIndex < currentJob.length) {
-                typingTimeout = setTimeout(type, 60);
-            } else {
-                // Wait, then start deleting job
-                setTimeout(() => {
-                    isDeleting = true;
-                    type();
-                }, 1200);
-            }
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled'); // Aggiunge sfondo scuro
         } else {
-            text = base + currentJob.substring(0, charIndex - 1);
-            charIndex--;
-            el.textContent = text;
-            if (charIndex > 0) {
-                typingTimeout = setTimeout(type, 40);
-            } else {
-                // Move to next job
-                isDeleting = false;
-                jobIndex = (jobIndex + 1) % jobs.length;
-                setTimeout(type, 500);
-            }
+            navbar.classList.remove('scrolled'); // Torna trasparente
         }
     }
-    // Start typing after a short delay
-    setTimeout(() => {
-        charIndex = 0;
-        type();
-    }, 800);
+
+    // Controlla quando scorri
+    window.addEventListener('scroll', checkScroll);
+    // Controlla anche appena carichi la pagina
+    checkScroll();
+
+
+    // --- 3. EFFETTO TYPEWRITER (Macchina da scrivere) ---
+    const textElement = document.getElementById('typewriter');
+    
+    // Le tue parole specifiche
+    const words = ["an architect.", "a lawyer.", "a teacher."];
+    
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100; // Velocità di scrittura iniziale
+
+    function type() {
+        // Controllo se l'elemento esiste per evitare errori
+        if (!textElement) return;
+
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            // Cancella carattere per carattere
+            textElement.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50; // Cancella più veloce
+        } else {
+            // Scrive carattere per carattere
+            textElement.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100; // Scrive a velocità normale
+        }
+
+        // Logica di cambio stato
+        if (!isDeleting && charIndex === currentWord.length) {
+            // Parola finita: aspetta un po' prima di cancellare
+            isDeleting = true;
+            typeSpeed = 2000; 
+        } else if (isDeleting && charIndex === 0) {
+            // Cancellazione finita: passa alla prossima parola
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500; // Piccola pausa prima di riscrivere
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Avvia l'effetto
+    type();
 });
