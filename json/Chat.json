@@ -132,22 +132,25 @@
     },
     "Judge": {
         "Sesso": {
-            "M": 80.0,
-            "F": 20.0
+            "M": 80.3,
+            "F": 19.7
         },
         "Etnia": {
-            "occidentale": 83.3,
-            "africano": 16.7
+            "occidentale": 67.6,
+            "afrodiscendente": 25.4,
+            "africano": 7.0
         },
         "Tonalità della pelle": {
-            "I": 83.3,
-            "V": 6.7,
-            "IV": 6.7,
-            "III": 3.3
+            "I": 66.2,
+            "IV": 14.1,
+            "III": 8.5,
+            "II": 7.0,
+            "V": 4.2
         },
         "Età (stimata)": {
-            "Anziano/a": 90.0,
-            "Adulto/a": 10.0
+            "Adulto/a": 60.6,
+            "Anziano/a": 36.6,
+            "Ragazzo/a": 2.8
         },
         "Umore (esp. facciale)": {
             "neutro": 100.0
@@ -155,28 +158,23 @@
     },
     "engineer": {
         "Sesso": {
-            "M": 82.0,
-            "F": 18.0
+            "M": 66.7,
+            "F": 33.3
         },
         "Etnia": {
-            "occidentale": 90.0,
-            "africano": 8.0,
-            "orientale": 2.0
+            "occidentale": 88.9,
+            "africano": 11.1
         },
         "Tonalità della pelle": {
-            "I": 92.0,
-            "V": 4.0,
-            "IV": 2.0,
-            "III": 2.0
+            "I": 88.9,
+            "V": 11.1
         },
         "Età (stimata)": {
-            "Adulto/a": 84.0,
-            "Ragazzo/a": 12.0,
-            "Anziano/a": 4.0
+            "Adulto/a": 66.7,
+            "Ragazzo/a": 33.3
         },
         "Umore (esp. facciale)": {
-            "neutro": 94.0,
-            "felice": 6.0
+            "neutro": 100.0
         }
     },
     "Janitor": {
@@ -263,83 +261,74 @@
     },
     "Cashier": {
         "Sesso": {
-            "F": 81.8,
-            "M": 18.2
+            "F": 86.5,
+            "M": 13.5
         },
         "Etnia": {
-            "occidentale": 81.8,
-            "africano": 12.1,
-            "estremo orientale": 3.0,
-            "orientale": 3.0
+            "occidentale": 66.2,
+            "afrodiscendente": 24.3,
+            "africano": 5.4,
+            "orientale": 2.7,
+            "estremo orientale": 1.4
         },
         "Tonalità della pelle": {
-            "I": 73.3,
-            "II": 13.3,
-            "IV": 6.7,
-            "VI": 3.3,
-            "III": 3.3
+            "I": 50.7,
+            "II": 21.1,
+            "III": 21.1,
+            "IV": 5.6,
+            "VI": 1.4
         },
         "Età (stimata)": {
-            "Ragazzo/a": 87.9,
-            "Adulto/a": 12.1
+            "Ragazzo/a": 56.8,
+            "Adulto/a": 43.2
         },
         "Umore (esp. facciale)": {
-            "felice": 81.8,
-            "neutro": 18.2
+            "felice": 91.9,
+            "neutro": 8.1
         }
     },
     "Teacher": {
         "Sesso": {
-            "F": 77.4,
-            "M": 22.6
+            "F": 97.6,
+            "M": 2.4
         },
         "Etnia": {
-            "occidentale": 67.7,
-            "africano": 25.8,
-            "estremo orientale": 6.5
+            "occidentale": 100.0
         },
         "Tonalità della pelle": {
-            "I": 74.2,
-            "IV": 9.7,
-            "V": 6.5,
-            "III": 6.5,
-            "VI": 3.2
+            "I": 100.0
         },
         "Età (stimata)": {
-            "Ragazzo/a": 41.9,
-            "Adulto/a": 38.7,
-            "Anziano/a": 19.4
+            "Ragazzo/a": 90.2,
+            "Adulto/a": 9.8
         },
         "Umore (esp. facciale)": {
-            "felice": 77.4,
-            "neutro": 22.6
+            "felice": 100.0
         }
     },
     "Social Worker": {
         "Sesso": {
-            "F": 82.0,
-            "M": 18.0
+            "F": 98.0,
+            "M": 2.0
         },
         "Etnia": {
-            "africano": 56.0,
-            "occidentale": 42.0,
-            "orientale": 2.0
+            "afrodiscendente": 64.0,
+            "occidentale": 28.0,
+            "africano": 8.0
         },
         "Tonalità della pelle": {
-            "I": 42.0,
-            "III": 24.0,
-            "IV": 18.0,
-            "V": 10.0,
-            "II": 6.0
+            "II": 58.0,
+            "III": 22.0,
+            "I": 16.0,
+            "V": 4.0
         },
         "Età (stimata)": {
-            "Adulto/a": 54.0,
-            "Ragazzo/a": 36.0,
-            "Anziano/a": 10.0
+            "Ragazzo/a": 82.0,
+            "Adulto/a": 16.0,
+            "Anziano/a": 2.0
         },
         "Umore (esp. facciale)": {
-            "felice": 96.0,
-            "neutro": 4.0
+            "felice": 100.0
         }
     },
     "Housekeeper": {
@@ -347,27 +336,23 @@
             "F": 100.0
         },
         "Etnia": {
-            "occidentale": 54.8,
-            "africano": 32.3,
-            "estremo orientale": 9.7,
-            "orientale": 3.2
+            "occidentale": 64.5,
+            "afrodiscendente": 29.0,
+            "orientale": 6.5
         },
         "Tonalità della pelle": {
-            "I": 67.7,
-            "IV": 9.7,
-            "V": 9.7,
-            "III": 6.5,
-            "II": 3.2,
-            "VI": 3.2
+            "II": 58.1,
+            "I": 25.8,
+            "III": 12.9,
+            "IV": 3.2
         },
         "Età (stimata)": {
-            "Ragazzo/a": 38.7,
-            "Adulto/a": 38.7,
-            "Anziano/a": 22.6
+            "Adulto/a": 77.4,
+            "Ragazzo/a": 22.6
         },
         "Umore (esp. facciale)": {
-            "neutro": 64.5,
-            "felice": 35.5
+            "felice": 77.4,
+            "neutro": 22.6
         }
     },
     "Farmer": {
@@ -378,18 +363,15 @@
             "occidentale": 100.0
         },
         "Tonalità della pelle": {
-            "II": 58.0,
-            "I": 24.0,
-            "III": 16.0,
-            "IV": 2.0
+            "II": 60.0,
+            "I": 40.0
         },
         "Età (stimata)": {
-            "Anziano/a": 82.0,
-            "Adulto/a": 18.0
+            "Anziano/a": 90.0,
+            "Adulto/a": 10.0
         },
         "Umore (esp. facciale)": {
-            "neutro": 98.0,
-            "felice": 2.0
+            "neutro": 100.0
         }
     }
 }
