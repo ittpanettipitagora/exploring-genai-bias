@@ -6,27 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Bias Research - Studio sui Modelli Generativi</title>
     <meta name="description" content="Ricerca sui bias nei modelli generativi text-to-image.">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="public/styles.css">
 </head>
 
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <a href="/" class="nav-logo-link"> 
-                <img src="cropped-panetti-pitagora-squared-removebg-preview.png" alt="Panetti Pitagora Logo" class="nav-logo-image">
+            <a href="/" class="nav-logo-link">
+                <img src="cropped-panetti-pitagora-squared-removebg-preview.png" alt="Panetti Pitagora Logo"
+                    class="nav-logo-image">
             </a>
-            
+
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="/" class="nav-link active">Home</a></li>
                 <li><a href="/models.html" class="nav-link">Modelli</a></li>
@@ -41,20 +42,34 @@
         <div class="container hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Generate an image of a person working as: <br>
-                    <span id="typewriter" class="typewriter"></span><span class="cursor">|</span>
+                    <h1 class="hero-title">
+                        Generate an image<br>
+                        of a person working<br>
+                        as: <span id="typewriter" class="typewriter"></span><span class="cursor">|</span>
+                    </h1>
                 </h1>
-                <p class="hero-subtitle">
-                    Una ricerca approfondita su come l'Intelligenza Artificiale rappresenta professioni, genere ed etnia. Analisi critica degli stereotipi nel Text-to-Image.
-                </p>
-                <div class="hero-buttons">
-                    <a href="/models.html" class="btn btn-primary">
-                        Esplora i Modelli
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                    <a href="/professions.html" class="btn btn-outline-light">Vedi Analisi</a>
+                <div class="hero-split">
+                    <div class="hero-left">
+                        <img src="public/logo.png" alt="Hero Logo" class="hero-graphic">
+                    </div>
+
+                    <div class="hero-right">
+                        <p class="hero-subtitle">
+                            Una ricerca approfondita su come i modelli generativi di immagini rappresentano le diverse
+                            professioni e quali stereotipi perpetuano.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="/models.html" class="btn btn-primary">
+                                Esplora i Modelli
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="/professions.html" class="btn btn-outline-light">Vedi Analisi</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,17 +80,19 @@
             <div class="section-header">
                 <h2 class="section-title">Il Nostro Approccio</h2>
             </div>
-            
+
             <div class="features-grid">
                 <div class="card">
                     <div class="card-body">
                         <div class="icon-wrapper">
                             <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                             </svg>
                         </div>
                         <h3>Analisi dei Modelli</h3>
-                        <p>Confrontiamo i principali modelli generativi come DALL-E, Midjourney, Stable Diffusion e altri per identificare pattern e bias.</p>
+                        <p>Confrontiamo i principali modelli generativi come DALL-E, Midjourney, Stable Diffusion e
+                            altri per identificare pattern e bias.</p>
                     </div>
                 </div>
 
@@ -83,11 +100,13 @@
                     <div class="card-body">
                         <div class="icon-wrapper">
                             <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
                         </div>
                         <h3>Studio delle Professioni</h3>
-                        <p>Analizziamo come vengono rappresentate diverse professioni in termini di genere, etnia e altri fattori demografici.</p>
+                        <p>Analizziamo come vengono rappresentate diverse professioni in termini di genere, etnia e
+                            altri fattori demografici.</p>
                     </div>
                 </div>
 
@@ -95,11 +114,13 @@
                     <div class="card-body">
                         <div class="icon-wrapper">
                             <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                             </svg>
                         </div>
                         <h3>Visualizzazione Dati</h3>
-                        <p>Presentiamo i risultati attraverso grafici interattivi e dashboard per facilitare la comprensione dei bias identificati.</p>
+                        <p>Presentiamo i risultati attraverso grafici interattivi e dashboard per facilitare la
+                            comprensione dei bias identificati.</p>
                     </div>
                 </div>
             </div>
@@ -120,4 +141,5 @@
 
     <script src="public/script.js"></script>
 </body>
+
 </html>
