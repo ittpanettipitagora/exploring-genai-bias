@@ -44,12 +44,12 @@ body {
 
 /* --- NAVIGATION --- */
 .nav {
-    background-color: #0C152D;
+    background-color: #000b2e;
     /* stesso blu in alto dell'hero */
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 70px;
+    height: 100px;
     display: flex;
     align-items: center;
     border-bottom: none;
@@ -63,7 +63,7 @@ body {
 }
 
 .nav-logo-image {
-    height: 200px;
+    height: 250px;
     width: auto;
 }
 
@@ -106,8 +106,7 @@ body {
 /* --- HERO SECTION (Home) --- */
 .hero {
     position: relative;
-    background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6)),
-        url('Screenshot 2025-11-17 203221.png');
+    background-image: url('../images/hero.background.png');
     background-size: cover;
     background-position: center;
     padding: 6rem 0;
@@ -164,7 +163,6 @@ body {
 .hero-right {
     flex: 1;
     text-align: left;
-
 }
 
 /* Responsive */
@@ -614,7 +612,6 @@ body {
         }
     }
 
-    s
 
     /* Applica le animazioni */
     .hero-title {
