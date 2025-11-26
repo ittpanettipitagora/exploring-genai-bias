@@ -2,114 +2,424 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dettaglio Modello - AI Bias Research</title>
-    <meta name="description" content="Analisi dettagliata dei bias e delle tendenze nel modello generativo">
-    <link rel="stylesheet" href="static/style/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bing Image Creator — Analisi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --body-bg: #121212;
+            --card: #1f1f1f;
+            --muted: #888;
+            --accent: #1a73e8;
+            --accent-2: #34a853;
+            --radius: 16px;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: var(--body-bg);
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
+            padding: 28px 16px;
+        }
+
+        .wrap {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 72px;
+            height: 72px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p.lead {
+            color: var(--muted);
+            font-size: 18px;
+            margin: 6px 0 0;
+        }
+
+        nav.top-nav {
+            display: flex;
+            gap: 12px;
+            margin: 24px 0;
+            flex-wrap: wrap;
+        }
+
+        nav.top-nav button {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 12px 16px;
+            border-radius: 12px;
+            color: var(--muted);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        nav.top-nav button.active {
+            background: linear-gradient(90deg, rgba(26, 115, 232, 0.12), rgba(52, 168, 83, 0.06));
+            color: var(--accent);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+        }
+
+        main {
+            display: block;
+        }
+
+        .content {
+            background: transparent;
+            padding: 16px;
+            border-radius: 16px;
+        }
+
+        section.block {
+            background: var(--card);
+            padding: 24px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 24px;
+        }
+
+        section.block h2 {
+            font-size: 32px;
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        section.block h3 {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        section.block p,
+        section.block li {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        section.block ul {
+            padding-left: 22px;
+        }
+
+        .strength-weakness-container {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .strength-weakness {
+            flex: 1;
+            min-width: 280px;
+            background: var(--card);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-top: 16px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(26, 115, 232, 0.05), transparent);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            min-height: 130px;
+        }
+
+        .card h4 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: var(--accent);
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .perc-row {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin: 12px 0;
+            font-size: 18px;
+        }
+
+        .perc-label {
+            width: 160px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .perc-bar {
+            flex: 1;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .perc-bar>i {
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            border-radius: 14px;
+            transition: width 1100ms cubic-bezier(.22, .9, .3, 1);
+        }
+
+        .perc-value {
+            width: 60px;
+            text-align: right;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .counters {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .counter {
+            flex: 1;
+            background: linear-gradient(180deg, #1f1f1f 0%, #292929 100%);
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .counter .num {
+            font-size: 28px;
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .counter .label {
+            color: var(--muted);
+            font-size: 16px;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .analysis-box,
+        .bias-box {
+            margin-top: 16px;
+            padding: 16px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(12px);
+            animation: fadeIn .6s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        button:focus,
+        a:focus {
+            outline: 3px solid rgba(59, 130, 246, 0.16);
+            outline-offset: 4px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">AI Bias Research</a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/models.html" class="nav-link active">Modelli</a></li>
-                <li><a href="/professions.html" class="nav-link">Professioni</a></li>
-                <li><a href="/about.html" class="nav-link">About</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="wrap">
+        <header>
+            <div class="logo" id="logo1">B</div>
+            <div>
+                <h1 id="model-title">Bing Image Creator</h1>
+                <p class="lead" id="model-summary">Bias, pattern e rappresentazioni visive</p>
+            </div>
+        </header>
+        <nav class="top-nav" role="navigation" aria-label="Sezioni principali">
+            <button data-scroll="#definizione" class="active">Definizione</button>
+            <button data-scroll="#forza">Punti di forza / debolezza</button>
+            <button data-scroll="#architettura">Architettura</button>
+            <button data-scroll="#stereotipi">Stereotipi</button>
+        </nav>
+        <main>
+            <div class="content">
+                <section id="definizione" class="block fade-in">
+                    <h2>Definizione</h2>
+                    <p id="model-description">Testo descrittivo del modello selezionato.</p>
+                </section>
+                <section id="forza" class="block fade-in">
+                    <div class="strength-weakness-container">
+                        <div class="strength-weakness">
+                            <h3>Punti di forza</h3>
+                            <p id="strengths-text">Testo dei punti di forza del modello.</p>
+                        </div>
+                        <div class="strength-weakness">
+                            <h3>Punti di debolezza</h3>
+                            <p id="weaknesses-text">Testo dei punti di debolezza del modello.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="architettura" class="block fade-in">
+                    <h2>Analisi Qualitativa</h2>
+                    <p id="analysis-text">Analisi e considerazioni generali sul modello selezionato.</p>
+                </section>
+                <section id="stereotipi" class="block fade-in">
+                    <h2>Conclusioni</h2>
+                    <p id="conclusions-text">Conclusioni generali sul modello.</p>
+                </section>
+            </div>
+        </main>
+    </div>
 
-    <main class="container page-content">
-        <div class="page-header">
-            <h1 id="modelName">[Nome del Modello]</h1>
-            <p class="page-subtitle">
-                Inserisci qui una breve introduzione al modello: chi lo ha sviluppato, che tipo di tecnologia usa, e
-                l'obiettivo dell'analisi.
-            </p>
-        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Step 1: Get the 'id' from the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const modelId = urlParams.get('id'); // This will be something like 'leonardo-ai', 'chatgpt', etc.
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Introduzione e Caratteristiche</h2>
-            </div>
-            <div class="card-content prose">
-                <ul>
-                    <li><strong>Nome del modello:</strong> Indica il nome completo.</li>
-                    <li><strong>Origine e sviluppatore:</strong> Chi lo ha creato? (es. OpenAI, Google, StabilityAI...)
-                    </li>
-                    <li><strong>Tecnologia:</strong> Breve descrizione (es. transformer, diffusion, ecc.).</li>
-                    <li><strong>Approccio visivo:</strong> Lo stile delle immagini (realistico, creativo, cartoon,
-                        ecc.).</li>
-                    <li><strong>Obiettivo:</strong> Cosa vuoi indagare con questo modello?</li>
-                </ul>
-            </div>
-        </div>
+            // Step 2: Call the function to update the content based on the model ID
+            loadModelDetails(modelId);
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Panoramica delle Generazioni</h2>
-                <p>Inserisci una galleria o carosello di immagini rappresentative generate dal modello per diverse
-                    professioni. Puoi aggiungere una gallery comparativa o uno slider.</p>
-            </div>
-            <div class="card-content">
-                <div class="gallery-comparativa">
-                    <!-- Inserisci qui le immagini: <figure><img src="..." alt="..."><figcaption>Professione</figcaption></figure> -->
-                </div>
-            </div>
-        </div>
+            // Step 3: Activate scroll navigation
+            setupScrollNavigation();
+        });
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Analisi qualitativa</h2>
-            </div>
-            <div class="card-content">
-                <ul>
-                    <li>Descrivi le tendenze osservate: stereotipi di genere, etnia prevalente, colore della pelle, ecc.
-                    </li>
-                    <li>Inserisci esempi visivi concreti (immagini o descrizioni).</li>
-                </ul>
-            </div>
-        </div>
+        // Function to load model details dynamically
+        function loadModelDetails(modelId) {
+            // Step 4: Get the DOM elements where the content will be updated
+            const logo = document.getElementById('logo1');
+            const modelTitle = document.getElementById('model-title');
+            const modelSummary = document.getElementById('model-summary');
+            const modelDescription = document.getElementById('model-description');
+            const strengthsText = document.getElementById('strengths-text');
+            const weaknessesText = document.getElementById('weaknesses-text');
+            const analysisText = document.getElementById('analysis-text');
+            const conclusionsText = document.getElementById('conclusions-text');
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Confronto con altri modelli</h2>
-            </div>
-            <div class="card-content">
-                <ul>
-                    <li>Breve sintesi di cosa distingue questo modello rispetto agli altri (più neutro? più creativo?
-                        più stereotipato?).</li>
-                    <li>Valuta l’inserimento di grafici comparativi.</li>
-                </ul>
-            </div>
-        </div>
+            // Step 5: Switch content based on the 'id' in the URL
+            switch (modelId) {
+                case 'leonardo-ai':
+                    logo.textContent = "L";
+                    modelTitle.textContent = "Leonardo AI";
+                    modelSummary.textContent = "Leonardo AI è un modello noto per la sua creatività e varietà stilistica nelle generazioni.";
+                    modelDescription.textContent = "Leonardo AI è un modello che eccelle nell'arte visiva, noto per la generazione di immagini artistiche e variegate.";
+                    strengthsText.textContent = "Punti di forza: Creatività, varietà stilistica.";
+                    weaknessesText.textContent = "Punti di debolezza: Talvolta presenta artefatti visivi.";
+                    analysisText.textContent = "Analisi qualitativa di Leonardo AI.";
+                    conclusionsText.textContent = "Conclusioni su Leonardo AI.";
+                    break;
+                case 'chatgpt':
+                    logo.textContent = "C";
+                    modelTitle.textContent = "ChatGPT";
+                    modelSummary.textContent = "ChatGPT è un modello di OpenAI, noto per la sua comprensione del linguaggio e la generazione di immagini coerenti.";
+                    modelDescription.textContent = "ChatGPT è ampiamente utilizzato per generare immagini da descrizioni dettagliate, ottimo per il linguaggio naturale.";
+                    strengthsText.textContent = "Punti di forza: Eccellente per linguaggio naturale, buona coerenza nelle immagini.";
+                    weaknessesText.textContent = "Punti di debolezza: Può fallire nei dettagli complessi e nelle immagini molto precise.";
+                    analysisText.textContent = "Analisi qualitativa di ChatGPT.";
+                    conclusionsText.textContent = "Conclusioni su ChatGPT.";
+                    break;
+                case 'gemini':
+                    logo.textContent = "G";
+                    modelTitle.textContent = "Gemini";
+                    modelSummary.textContent = "Gemini è sviluppato da Google ed è apprezzato per la sua modernità nelle generazioni di ambienti futuristici.";
+                    modelDescription.innerHTML = "Gemini è molto abile nella creazione di paesaggi futuristici e ambienti altamente dettagliati.";
+                    strengthsText.textContent = "Punti di forza: Eccellente per scenari futuristici e ambienti moderni.";
+                    weaknessesText.textContent = "Punti di debolezza: Meno versatile in altri tipi di immagini, come i ritratti.";
+                    analysisText.textContent = "Analisi qualitativa di Gemini.";
+                    conclusionsText.textContent = "Conclusioni su Gemini.";
+                    break;
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Conclusione / Insight</h2>
-            </div>
-            <div class="card-content prose">
-                <ul>
-                    <li>Scrivi 1–2 punti chiave sul comportamento del modello.</li>
-                    <li>Concludi con una domanda aperta o una riflessione: “Cosa ci dice questo su come l’AI vede il
-                        mondo?”</li>
-                </ul>
-            </div>
-        </div>
-    </main>
+                case 'canva':
+                    logo.textContent = "C";
+                    modelTitle.textContent = "CANVA";
+                    modelSummary.textContent = "DALL·E 3 è un modello avanzato di OpenAI, noto per la sua capacità di generare immagini dettagliate e creative.";
+                    modelDescription.textContent = "DALL·E 3 eccelle nella generazione di immagini complesse e creative, con un'attenzione particolare ai dettagli.";
+                    strengthsText.textContent = "Punti di forza: Alta qualità delle immagini, creatività elevata.";
+                    weaknessesText.textContent = "Punti di debolezza: Può essere lento nella generazione di immagini complesse.";
+                    analysisText.textContent = "Analisi qualitativa di DALL·E 3.";
+                    conclusionsText.textContent = "Conclusioni su DALL·E 3.";
+                    break;
 
-    <script src="static/script/script.js"></script>
-    <script src="static/script/model-detail.js"></script>
+                case 'bing-image-creator':
+                    logo.textContent = "B";
+                    modelTitle.textContent = "BING Image Creator";
+                    modelSummary.textContent = "Non sono disponibili informazioni per questo modello.";
+                    modelDescription.textContent = "Descrizione non disponibile.";
+                    strengthsText.textContent = "Punti di forza non disponibili.";
+                    weaknessesText.textContent = "Punti di debolezza non disponibili.";
+                    analysisText.textContent = "Analisi non disponibile.";
+                    conclusionsText.textContent = "Conclusioni non disponibili.";
+                    break;
+            }
+        }
+
+        // Function to enable scroll navigation
+        function setupScrollNavigation() {
+            // Step 6: Add event listeners to scroll navigation buttons
+            document.querySelectorAll('nav.top-nav button[data-scroll]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('nav.top-nav button').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const target = document.querySelector(btn.getAttribute('data-scroll'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+
+            // Step 7: Activate the first button on page load
+            const firstBtn = document.querySelector('nav.top-nav button');
+            if (firstBtn) firstBtn.classList.add('active');
+        }
+    </script>
 </body>
 
 </html>
