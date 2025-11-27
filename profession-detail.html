@@ -117,7 +117,35 @@
 
         .fade-in { opacity: 0; transform: translateY(12px); animation: fadeIn .6s forwards; }
         @keyframes fadeIn { to { opacity: 1; transform: none; } }
+        
+        .radar-card-container {
+            background: var(--card);
+            padding: 32px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .radar-card {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #comparisonChart {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        #radarLegend {
+            font-size: 16px;
+            font-weight: 500;
+            color: #eee;
+            min-width: 150px;
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -133,6 +161,7 @@
                 <ul>
                     <li><a href="#introduzione">Introduzione</a></li>
                     <li><a href="#analisi">Analisi Visiva</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
                     <li><a href="#bias">Bias nei modelli AI</a></li>
                     <li><a href="#conclusione">Conclusione</a></li>
                 </ul>
@@ -163,6 +192,16 @@
                         </ul>
                     </div>
                 </section>
+                
+                <section class="block fade-in" id="comparison">
+                    <h2>Comparison Chart</h2>
+                    <div class="radar-card-container">
+                        <div class="radar-card">
+                            <canvas id="comparisonChart"></canvas>
+                            <div id="radarLegend"></div>
+                        </div>
+                    </div>
+                </section>
 
                 <section class="block fade-in" id="bias">
                     <div class="bias-box">
@@ -187,5 +226,6 @@
             </div>
         </main>
     </div>
+    <script src="static/script/profession-detail.js"></script>
 </body>
 </html>

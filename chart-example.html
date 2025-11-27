@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radar Chart Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+    <style>
+        :root {
+            --body-bg: #121212;
+            --card-bg: #1f1f1f;
+            --muted: #888;
+            --accent: #1a73e8;
+            --accent-2: #34a853;
+            --radius: 16px;
+            --max-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: var(--body-bg);
+            color: #fff;
+            -webkit-font-smoothing: antialiased;
+            padding: 28px;
+            display: grid;
+            place-items: center;
+        }
+
+        .radar-card-container {
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .radar-card {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #diversityRadar {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        #radarLegend {
+            font-size: 16px;
+            font-weight: 500;
+            color: #eee;
+            min-width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="radar-card-container">
+        <div class="radar-card">
+            <canvas id="diversityRadar" width="600" height="450"></canvas>
+            <div id="radarLegend"></div>
+        </div>
+    </div>
+
+    <script src="static/script/chart-loader.js"></script>
+</body>
+
+</html>

@@ -274,6 +274,7 @@
             outline-offset: 4px;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -289,6 +290,7 @@
             <button data-scroll="#definizione" class="active">Definizione</button>
             <button data-scroll="#forza">Punti di forza / debolezza</button>
             <button data-scroll="#architettura">Architettura</button>
+            <button data-scroll="#diversity-analysis">Diversity</button>
             <button data-scroll="#stereotipi">Stereotipi</button>
         </nav>
         <main>
@@ -313,6 +315,12 @@
                     <h2>Analisi Qualitativa</h2>
                     <p id="analysis-text">Analisi e considerazioni generali sul modello selezionato.</p>
                 </section>
+                <section id="diversity-analysis" class="block fade-in">
+                    <h2>Diversity Analysis</h2>
+                    <div style="width: 100%; max-width: 600px; margin: auto;">
+                        <canvas id="diversityChart"></canvas>
+                    </div>
+                </section>
                 <section id="stereotipi" class="block fade-in">
                     <h2>Conclusioni</h2>
                     <p id="conclusions-text">Conclusioni generali sul modello.</p>
@@ -321,105 +329,7 @@
         </main>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Step 1: Get the 'id' from the URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const modelId = urlParams.get('id'); // This will be something like 'leonardo-ai', 'chatgpt', etc.
-
-            // Step 2: Call the function to update the content based on the model ID
-            loadModelDetails(modelId);
-
-            // Step 3: Activate scroll navigation
-            setupScrollNavigation();
-        });
-
-        // Function to load model details dynamically
-        function loadModelDetails(modelId) {
-            // Step 4: Get the DOM elements where the content will be updated
-            const logo = document.getElementById('logo1');
-            const modelTitle = document.getElementById('model-title');
-            const modelSummary = document.getElementById('model-summary');
-            const modelDescription = document.getElementById('model-description');
-            const strengthsText = document.getElementById('strengths-text');
-            const weaknessesText = document.getElementById('weaknesses-text');
-            const analysisText = document.getElementById('analysis-text');
-            const conclusionsText = document.getElementById('conclusions-text');
-
-            // Step 5: Switch content based on the 'id' in the URL
-            switch (modelId) {
-                case 'leonardo-ai':
-                    logo.textContent = "L";
-                    modelTitle.textContent = "Leonardo AI";
-                    modelSummary.textContent = "Leonardo AI è un modello noto per la sua creatività e varietà stilistica nelle generazioni.";
-                    modelDescription.textContent = "Leonardo AI è un modello che eccelle nell'arte visiva, noto per la generazione di immagini artistiche e variegate.";
-                    strengthsText.textContent = "Punti di forza: Creatività, varietà stilistica.";
-                    weaknessesText.textContent = "Punti di debolezza: Talvolta presenta artefatti visivi.";
-                    analysisText.textContent = "Analisi qualitativa di Leonardo AI.";
-                    conclusionsText.textContent = "Conclusioni su Leonardo AI.";
-                    break;
-                case 'chatgpt':
-                    logo.textContent = "C";
-                    modelTitle.textContent = "ChatGPT";
-                    modelSummary.textContent = "ChatGPT è un modello di OpenAI, noto per la sua comprensione del linguaggio e la generazione di immagini coerenti.";
-                    modelDescription.textContent = "ChatGPT è ampiamente utilizzato per generare immagini da descrizioni dettagliate, ottimo per il linguaggio naturale.";
-                    strengthsText.textContent = "Punti di forza: Eccellente per linguaggio naturale, buona coerenza nelle immagini.";
-                    weaknessesText.textContent = "Punti di debolezza: Può fallire nei dettagli complessi e nelle immagini molto precise.";
-                    analysisText.textContent = "Analisi qualitativa di ChatGPT.";
-                    conclusionsText.textContent = "Conclusioni su ChatGPT.";
-                    break;
-                case 'gemini':
-                    logo.textContent = "G";
-                    modelTitle.textContent = "Gemini";
-                    modelSummary.textContent = "Gemini è sviluppato da Google ed è apprezzato per la sua modernità nelle generazioni di ambienti futuristici.";
-                    modelDescription.innerHTML = "Gemini è molto abile nella creazione di paesaggi futuristici e ambienti altamente dettagliati.";
-                    strengthsText.textContent = "Punti di forza: Eccellente per scenari futuristici e ambienti moderni.";
-                    weaknessesText.textContent = "Punti di debolezza: Meno versatile in altri tipi di immagini, come i ritratti.";
-                    analysisText.textContent = "Analisi qualitativa di Gemini.";
-                    conclusionsText.textContent = "Conclusioni su Gemini.";
-                    break;
-
-                case 'canva':
-                    logo.textContent = "C";
-                    modelTitle.textContent = "CANVA";
-                    modelSummary.textContent = "DALL·E 3 è un modello avanzato di OpenAI, noto per la sua capacità di generare immagini dettagliate e creative.";
-                    modelDescription.textContent = "DALL·E 3 eccelle nella generazione di immagini complesse e creative, con un'attenzione particolare ai dettagli.";
-                    strengthsText.textContent = "Punti di forza: Alta qualità delle immagini, creatività elevata.";
-                    weaknessesText.textContent = "Punti di debolezza: Può essere lento nella generazione di immagini complesse.";
-                    analysisText.textContent = "Analisi qualitativa di DALL·E 3.";
-                    conclusionsText.textContent = "Conclusioni su DALL·E 3.";
-                    break;
-
-                case 'bing-image-creator':
-                    logo.textContent = "B";
-                    modelTitle.textContent = "BING Image Creator";
-                    modelSummary.textContent = "Non sono disponibili informazioni per questo modello.";
-                    modelDescription.textContent = "Descrizione non disponibile.";
-                    strengthsText.textContent = "Punti di forza non disponibili.";
-                    weaknessesText.textContent = "Punti di debolezza non disponibili.";
-                    analysisText.textContent = "Analisi non disponibile.";
-                    conclusionsText.textContent = "Conclusioni non disponibili.";
-                    break;
-            }
-        }
-
-        // Function to enable scroll navigation
-        function setupScrollNavigation() {
-            // Step 6: Add event listeners to scroll navigation buttons
-            document.querySelectorAll('nav.top-nav button[data-scroll]').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('nav.top-nav button').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    const target = document.querySelector(btn.getAttribute('data-scroll'));
-                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            });
-
-            // Step 7: Activate the first button on page load
-            const firstBtn = document.querySelector('nav.top-nav button');
-            if (firstBtn) firstBtn.classList.add('active');
-        }
-    </script>
+    <script src="static/script/model-detail.js"></script>
 </body>
 
 </html>
