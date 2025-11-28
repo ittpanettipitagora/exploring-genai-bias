@@ -16,6 +16,8 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .countdown {
@@ -37,6 +39,7 @@
             font-weight: bold;
             color: #ffffff;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .countdown-values div {
@@ -63,25 +66,18 @@
             margin-top: 1rem;
         }
 
-        /* --- BOTTONE PERSONALIZZATO (COLORI ADATTATI) --- */
         .btn-about {
             margin-top: 90px;
-            /* ➜ Bottone molto più in basso */
             padding: 18px 55px;
             font-size: 1.4rem;
             font-weight: bold;
             border: none;
             border-radius: 14px;
             cursor: pointer;
-
-            /* Colori adattati allo sfondo */
             background: linear-gradient(135deg, #00b7ff, #0073ff);
             color: white;
-
-            /* Glow */
             box-shadow: 0 0 18px rgba(0, 195, 255, 0.55),
                 0 0 35px rgba(0, 140, 255, 0.35);
-
             transition: 0.3s ease-in-out;
         }
 
@@ -90,6 +86,49 @@
             box-shadow: 0 0 28px rgba(0, 195, 255, 0.85),
                 0 0 55px rgba(0, 140, 255, 0.65);
             background: linear-gradient(135deg, #00d4ff, #008cff);
+        }
+
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 1024px) {
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .countdown-values {
+                font-size: 6rem;
+                gap: 1.5rem;
+            }
+
+            .labels {
+                font-size: 1.5rem;
+            }
+
+            .btn-about {
+                margin-top: 60px;
+                padding: 14px 45px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2rem;
+            }
+
+            .countdown-values {
+                font-size: 4rem;
+                gap: 1rem;
+            }
+
+            .labels {
+                font-size: 1.2rem;
+            }
+
+            .btn-about {
+                margin-top: 40px;
+                padding: 12px 35px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
