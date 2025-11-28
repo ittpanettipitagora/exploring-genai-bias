@@ -43,48 +43,43 @@ body {
 }
 
 /* --- NAVIGATION --- */
-.nav {
-    background-color: #000b2e;
-    /* stesso blu in alto dell'hero */
+.home-nav-centered {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000b2e;
+    /* sfondo scuro uniforme */
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    border-bottom: none;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.nav-logo-image {
-    height: 250px;
-    width: auto;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-}
-
-.nav-link {
+/* BOTTONE HOME MODERNO */
+.home-button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 35px;
     color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.2s;
+    background: linear-gradient(135deg, #4a6bff, #8098ff);
+    box-shadow: 0 0 20px rgba(74, 107, 255, 0.6), 0 0 35px rgba(128, 152, 255, 0.4);
+    border: none;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: white;
+/* HOVER */
+.home-button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #8098ff, #4a6bff);
+    box-shadow: 0 0 30px rgba(128, 152, 255, 0.7), 0 0 45px rgba(74, 107, 255, 0.5);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
+
+
 
 /* Mobile Menu Toggle */
 .nav-toggle {
@@ -627,4 +622,5 @@ body {
         animation: fadeRight 1.2s ease-out forwards;
         animation-delay: 0.3s;
     }
+
 }
